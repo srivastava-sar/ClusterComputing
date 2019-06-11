@@ -1,0 +1,1905 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<!-- 2019-06-11 Tue 21:07 -->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>&lrm;</title>
+<meta name="generator" content="Org mode" />
+<meta name="author" content="Saransh Srivastava" />
+<style type="text/css">
+ <!--/*--><![CDATA[/*><!--*/
+  .title  { text-align: center;
+             margin-bottom: .2em; }
+  .subtitle { text-align: center;
+              font-size: medium;
+              font-weight: bold;
+              margin-top:0; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { font-family: monospace; color: green; }
+  .priority { font-family: monospace; color: orange; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #ccc;
+    box-shadow: 3px 3px 3px #eee;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: visible;
+    padding-top: 1.2em;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    background-color: white;
+    top: -10px;
+    right: 10px;
+    padding: 3px;
+    border: 1px solid black;
+  }
+  pre.src:hover:before { display: inline;}
+  /* Languages per Org manual */
+  pre.src-asymptote:before { content: 'Asymptote'; }
+  pre.src-awk:before { content: 'Awk'; }
+  pre.src-C:before { content: 'C'; }
+  /* pre.src-C++ doesn't work in CSS */
+  pre.src-clojure:before { content: 'Clojure'; }
+  pre.src-css:before { content: 'CSS'; }
+  pre.src-D:before { content: 'D'; }
+  pre.src-ditaa:before { content: 'ditaa'; }
+  pre.src-dot:before { content: 'Graphviz'; }
+  pre.src-calc:before { content: 'Emacs Calc'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-fortran:before { content: 'Fortran'; }
+  pre.src-gnuplot:before { content: 'gnuplot'; }
+  pre.src-haskell:before { content: 'Haskell'; }
+  pre.src-hledger:before { content: 'hledger'; }
+  pre.src-java:before { content: 'Java'; }
+  pre.src-js:before { content: 'Javascript'; }
+  pre.src-latex:before { content: 'LaTeX'; }
+  pre.src-ledger:before { content: 'Ledger'; }
+  pre.src-lisp:before { content: 'Lisp'; }
+  pre.src-lilypond:before { content: 'Lilypond'; }
+  pre.src-lua:before { content: 'Lua'; }
+  pre.src-matlab:before { content: 'MATLAB'; }
+  pre.src-mscgen:before { content: 'Mscgen'; }
+  pre.src-ocaml:before { content: 'Objective Caml'; }
+  pre.src-octave:before { content: 'Octave'; }
+  pre.src-org:before { content: 'Org mode'; }
+  pre.src-oz:before { content: 'OZ'; }
+  pre.src-plantuml:before { content: 'Plantuml'; }
+  pre.src-processing:before { content: 'Processing.js'; }
+  pre.src-python:before { content: 'Python'; }
+  pre.src-R:before { content: 'R'; }
+  pre.src-ruby:before { content: 'Ruby'; }
+  pre.src-sass:before { content: 'Sass'; }
+  pre.src-scheme:before { content: 'Scheme'; }
+  pre.src-screen:before { content: 'Gnu Screen'; }
+  pre.src-sed:before { content: 'Sed'; }
+  pre.src-sh:before { content: 'shell'; }
+  pre.src-sql:before { content: 'SQL'; }
+  pre.src-sqlite:before { content: 'SQLite'; }
+  /* additional languages in org.el's org-babel-load-languages alist */
+  pre.src-forth:before { content: 'Forth'; }
+  pre.src-io:before { content: 'IO'; }
+  pre.src-J:before { content: 'J'; }
+  pre.src-makefile:before { content: 'Makefile'; }
+  pre.src-maxima:before { content: 'Maxima'; }
+  pre.src-perl:before { content: 'Perl'; }
+  pre.src-picolisp:before { content: 'Pico Lisp'; }
+  pre.src-scala:before { content: 'Scala'; }
+  pre.src-shell:before { content: 'Shell Script'; }
+  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
+  /* additional language identifiers per "defun org-babel-execute"
+       in ob-*.el */
+  pre.src-cpp:before  { content: 'C++'; }
+  pre.src-abc:before  { content: 'ABC'; }
+  pre.src-coq:before  { content: 'Coq'; }
+  pre.src-groovy:before  { content: 'Groovy'; }
+  /* additional language identifiers from org-babel-shell-names in
+     ob-shell.el: ob-shell is the only babel language using a lambda to put
+     the execution function name together. */
+  pre.src-bash:before  { content: 'bash'; }
+  pre.src-csh:before  { content: 'csh'; }
+  pre.src-ash:before  { content: 'ash'; }
+  pre.src-dash:before  { content: 'dash'; }
+  pre.src-ksh:before  { content: 'ksh'; }
+  pre.src-mksh:before  { content: 'mksh'; }
+  pre.src-posh:before  { content: 'posh'; }
+  /* Additional Emacs modes also supported by the LaTeX listings package */
+  pre.src-ada:before { content: 'Ada'; }
+  pre.src-asm:before { content: 'Assembler'; }
+  pre.src-caml:before { content: 'Caml'; }
+  pre.src-delphi:before { content: 'Delphi'; }
+  pre.src-html:before { content: 'HTML'; }
+  pre.src-idl:before { content: 'IDL'; }
+  pre.src-mercury:before { content: 'Mercury'; }
+  pre.src-metapost:before { content: 'MetaPost'; }
+  pre.src-modula-2:before { content: 'Modula-2'; }
+  pre.src-pascal:before { content: 'Pascal'; }
+  pre.src-ps:before { content: 'PostScript'; }
+  pre.src-prolog:before { content: 'Prolog'; }
+  pre.src-simula:before { content: 'Simula'; }
+  pre.src-tcl:before { content: 'tcl'; }
+  pre.src-tex:before { content: 'TeX'; }
+  pre.src-plain-tex:before { content: 'Plain TeX'; }
+  pre.src-verilog:before { content: 'Verilog'; }
+  pre.src-vhdl:before { content: 'VHDL'; }
+  pre.src-xml:before { content: 'XML'; }
+  pre.src-nxml:before { content: 'XML'; }
+  /* add a generic configuration mode; LaTeX export needs an additional
+     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
+  pre.src-conf:before { content: 'Configuration File'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.org-right  { text-align: center;  }
+  th.org-left   { text-align: center;   }
+  th.org-center { text-align: center; }
+  td.org-right  { text-align: right;  }
+  td.org-left   { text-align: left;   }
+  td.org-center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara { display: inline; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  .org-svg { width: 90%; }
+  /*]]>*/-->
+</style>
+<script type="text/javascript">
+/*
+@licstart  The following is the entire license notice for the
+JavaScript code in this tag.
+
+Copyright (C) 2012-2018 Free Software Foundation, Inc.
+
+The JavaScript code in this tag is free software: you can
+redistribute it and/or modify it under the terms of the GNU
+General Public License (GNU GPL) as published by the Free Software
+Foundation, either version 3 of the License, or (at your option)
+any later version.  The code is distributed WITHOUT ANY WARRANTY;
+without even the implied warranty of MERCHANTABILITY or FITNESS
+FOR A PARTICULAR PURPOSE.  See the GNU GPL for more details.
+
+As additional permission under GNU GPL version 3 section 7, you
+may distribute non-source (e.g., minimized or compacted) forms of
+that code without the copy of the GNU GPL normally required by
+section 4, provided you include this license notice and a URL
+through which recipients can access the Corresponding Source.
+
+
+@licend  The above is the entire license notice
+for the JavaScript code in this tag.
+*/
+<!--/*--><![CDATA[/*><!--*/
+ function CodeHighlightOn(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(null != target) {
+     elem.cacheClassElem = elem.className;
+     elem.cacheClassTarget = target.className;
+     target.className = "code-highlighted";
+     elem.className   = "code-highlighted";
+   }
+ }
+ function CodeHighlightOff(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(elem.cacheClassElem)
+     elem.className = elem.cacheClassElem;
+   if(elem.cacheClassTarget)
+     target.className = elem.cacheClassTarget;
+ }
+/*]]>*///-->
+</script>
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        displayAlign: "center",
+        displayIndent: "0em",
+
+        "HTML-CSS": { scale: 100,
+                        linebreaks: { automatic: "false" },
+                        webFont: "TeX"
+                       },
+        SVG: {scale: 100,
+              linebreaks: { automatic: "false" },
+              font: "TeX"},
+        NativeMML: {scale: 100},
+        TeX: { equationNumbers: {autoNumber: "AMS"},
+               MultLineWidth: "85%",
+               TagSide: "right",
+               TagIndent: ".8em"
+             }
+});
+</script>
+<script type="text/javascript"
+        src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS_HTML"></script>
+</head>
+<body>
+<div id="content">
+<div id="table-of-contents">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents">
+<ul>
+<li><a href="#orgea1f9ff">1. lecture 1</a></li>
+<li><a href="#org6adf6d4">2. Lecture 2: Domain Driver</a></li>
+<li><a href="#orgec19f04">3. Lecture 3: Overview of Distributed and parallel computing</a>
+<ul>
+<li><a href="#org641cc72">3.1. Approaches for parallelism:</a></li>
+<li><a href="#orgd708d91">3.2. Advantages of Parallelism:</a></li>
+<li><a href="#orgbb529f3">3.3. MPI</a></li>
+<li><a href="#orgc1d6756">3.4. Erronious assumptions of Distributed system</a></li>
+<li><a href="#org4384fb9">3.5. Parallel programming paradigms</a></li>
+</ul>
+</li>
+<li><a href="#org6f2baeb">4. Lecture 4: SPARTAN HPC system</a>
+<ul>
+<li><a href="#org0b606a2">4.1. High performance computing characteristics</a></li>
+<li><a href="#org53a1aac">4.2. SPARTAN</a></li>
+<li><a href="#orgbe8d28e">4.3. Flynn Taxonomy</a>
+<ul>
+<li><a href="#org19bc018">4.3.1. Shared memory parallel programming</a></li>
+<li><a href="#orgaecc251">4.3.2. Distributed memory parallel programming</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#org1fec987">5. Lecture 5: NecTAR:</a>
+<ul>
+<li><a href="#orgbc2f697">5.1. Cloud computing:</a></li>
+<li><a href="#org4074fd0">5.2. Nectar</a></li>
+<li><a href="#org5662718">5.3. Ansible</a></li>
+</ul>
+</li>
+<li><a href="#orga1b5dd5">6. Lecture 6: Web Services, REST, Docker, Contain</a>
+<ul>
+<li><a href="#orgdb5d1d1">6.1. Web services: SOAP</a></li>
+<li><a href="#orgda24ffc">6.2. Rest API</a></li>
+<li><a href="#orgc92c164">6.3. Docker: ( Virtualization vs Containerizatipn)</a></li>
+<li><a href="#org33d566e">6.4. Container Orchestration tools:</a></li>
+<li><a href="#org5d6e5f5">6.5. Safe/Idempotent</a></li>
+</ul>
+</li>
+<li><a href="#org163a739">7. Lecture 7:Big data</a>
+<ul>
+<li><a href="#orge276a6c">7.1. Big data</a></li>
+<li><a href="#org04c3d2f">7.2. CAP theoren (Brewer)</a></li>
+<li><a href="#orgfa87e31">7.3. Two- phase commit</a></li>
+<li><a href="#org0e8ad0b">7.4. Paxos</a></li>
+<li><a href="#org96ab4ca">7.5. MVCC</a></li>
+<li><a href="#orgadacc89">7.6. Sharding and replication</a></li>
+<li><a href="#org2eb25f8">7.7. MapReduce:</a></li>
+<li><a href="#org7cea15b">7.8. CouchDB:</a></li>
+<li><a href="#org921068d">7.9. Query</a></li>
+</ul>
+</li>
+<li><a href="#orgb8bad54">8. Lecture 8: Big data Analytics</a>
+<ul>
+<li><a href="#org97fe85c">8.1. Analytics</a></li>
+<li><a href="#org9d78fbe">8.2. Hadoop</a></li>
+<li><a href="#orgc913ff1">8.3. HDFS</a></li>
+<li><a href="#orgcf3a49f">8.4. YARN</a></li>
+<li><a href="#org8b8bfa6">8.5. Spark</a></li>
+</ul>
+</li>
+<li><a href="#org6a27d1d">9. Lecture 9</a>
+<ul>
+<li><a href="#orgff029d3">9.1. Principle</a></li>
+<li><a href="#orgc9454ce">9.2. what happends in VM?</a></li>
+<li><a href="#orgfbfc0a1">9.3. Motivation History</a></li>
+<li><a href="#orga094d30">9.4. Requirements of virtualization?</a></li>
+<li><a href="#org1b535d3">9.5. X86 Architecture Problems:</a></li>
+<li><a href="#org427529e">9.6. Virtualization approaches</a></li>
+<li><a href="#org57798b2">9.7. Memory management</a></li>
+<li><a href="#org107287f">9.8. Live migration</a></li>
+<li><a href="#orgb04efdb">9.9. OpenStack-AWS</a></li>
+<li><a href="#orga6e47bc">9.10. NeCTAR Research cloud</a></li>
+<li><a href="#org46a6cf7">9.11. Faas : Serverless</a></li>
+</ul>
+</li>
+<li><a href="#orgabe45b7">10. Lecture 12</a>
+<ul>
+<li><a href="#org4a0afce">10.1. Technical Challenges:</a></li>
+<li><a href="#orgf0fd4e1">10.2. Certification:</a></li>
+<li><a href="#org57668c7">10.3. Authorization</a></li>
+<li><a href="#org25ebaf6">10.4. Shibboleth Augmented Authorisation</a></li>
+<li><a href="#org4c5f66f">10.5. Other cloud security challenges:</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgea1f9ff" class="outline-2">
+<h2 id="orgea1f9ff"><span class="section-number-2">1</span> lecture 1</h2>
+<div class="outline-text-2" id="text-1">
+<ol class="org-ol">
+<li>Cloud characteristics
+<ol class="org-ol">
+<li>on demand self-service</li>
+<li>Networked access</li>
+<li>Resourse pooling</li>
+<li>Rapid elasticity</li>
+<li>Measured service</li>
+</ol></li>
+<li>Flavours
+<ol class="org-ol">
+<li>Compute clouds - Amazon elastic compute cloud</li>
+<li>Data clouds - Amazon s3</li>
+<li>Application cloud - app store</li>
+<li>Private/public/hybrid etc</li>
+</ol></li>
+</ol>
+</div>
+</div>
+
+<div id="outline-container-org6adf6d4" class="outline-2">
+<h2 id="org6adf6d4"><span class="section-number-2">2</span> Lecture 2: Domain Driver</h2>
+<div class="outline-text-2" id="text-2">
+<p>
+Compute scaling
+Network scaling
+Present data
+Moved from Grid computer -&gt; personal computer -&gt; cloud computing
+Need tools to : search/analyse/share/visualize/track/destrio
+Large hydron collider
+Cancer research 
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgec19f04" class="outline-2">
+<h2 id="orgec19f04"><span class="section-number-2">3</span> Lecture 3: Overview of Distributed and parallel computing</h2>
+<div class="outline-text-2" id="text-3">
+<p>
+SPARTAN
+Amdahl's law
+</p>
+</div>
+<div id="outline-container-org641cc72" class="outline-3">
+<h3 id="org641cc72"><span class="section-number-3">3.1</span> Approaches for parallelism:</h3>
+<div class="outline-text-3" id="text-3-1">
+<ol class="org-ol">
+<li>Explicit vs implicit architecture
+Implicit :- parallelising compiler
+Explicit - Programmer is responsible for parallelism. (SPARTAN)</li>
+<li>Hardware
+<ol class="org-ol">
+<li>Threading CPU</li>
+<li>Multi-Core</li>
+<li>Types of Multiprocessing:
+<ol class="org-ol">
+<li>SMP- Symmetric multiprocessing ( all processors ar peers)</li>
+<li>NUMA - Non uniform memory access ( master/slave)</li>
+</ol></li>
+</ol></li>
+<li>OS
+<ol class="org-ol">
+<li>Most modern multi-core OS supports parallelism.</li>
+<li>Compute parallelism - using Processes / Threads</li>
+<li>Data parallelism : Using caching</li>
+</ol></li>
+<li>Software/Applications
+<ol class="org-ol">
+<li>Most languages supports parallelism: Threads, threadpools, locks, semaphores</li>
+<li>Key issues: Deadlocks/livelocks</li>
+</ol></li>
+</ol>
+</div>
+</div>
+
+<div id="outline-container-orgd708d91" class="outline-3">
+<h3 id="orgd708d91"><span class="section-number-3">3.2</span> Advantages of Parallelism:</h3>
+<div class="outline-text-3" id="text-3-2">
+<ol class="org-ol">
+<li>Increased throughput</li>
+<li>Economy of scale:</li>
+<li>Increased reliability</li>
+</ol>
+</div>
+</div>
+
+<div id="outline-container-orgbb529f3" class="outline-3">
+<h3 id="orgbb529f3"><span class="section-number-3">3.3</span> MPI</h3>
+<div class="outline-text-3" id="text-3-3">
+<ol class="org-ol">
+<li>HT Condor
+<ul class="org-ul">
+<li>Offers job queuing, scheduling policies,priority, resource management</li>
+<li>Allows to harvest CPU power from otherwise idle desktop</li>
+<li>No need to share filesystems</li>
+<li>can work across organizational boundaries</li>
+</ul></li>
+</ol>
+</div>
+</div>
+<div id="outline-container-orgc1d6756" class="outline-3">
+<h3 id="orgc1d6756"><span class="section-number-3">3.4</span> Erronious assumptions of Distributed system</h3>
+<div class="outline-text-3" id="text-3-4">
+<ol class="org-ol">
+<li>Network reliability</li>
+<li>Latency is zero</li>
+<li>Bandwidth is infinite</li>
+<li>network is secure</li>
+<li>Topology doesnt change</li>
+<li>There is one admin</li>
+<li>Transport cost is zero</li>
+<li>Network is homogenous</li>
+<li>Time is ubiqutous</li>
+</ol>
+</div>
+</div>
+<div id="outline-container-org4384fb9" class="outline-3">
+<h3 id="org4384fb9"><span class="section-number-3">3.5</span> Parallel programming paradigms</h3>
+<div class="outline-text-3" id="text-3-5">
+<ol class="org-ol">
+<li>Master worker/slave model</li>
+<li>Single program multiple data -&gt; Map reduce</li>
+<li>Data pipelining -&gt; multiple stages of execution</li>
+<li>Divide and conquer</li>
+<li>Speculative parallelism: when others fail. Uses "look ahead" execution</li>
+</ol>
+</div>
+</div>
+</div>
+<div id="outline-container-org6f2baeb" class="outline-2">
+<h2 id="org6f2baeb"><span class="section-number-2">4</span> Lecture 4: SPARTAN HPC system</h2>
+<div class="outline-text-2" id="text-4">
+</div>
+<div id="outline-container-org0b606a2" class="outline-3">
+<h3 id="org0b606a2"><span class="section-number-3">4.1</span> High performance computing characteristics</h3>
+<div class="outline-text-3" id="text-4-1">
+<ol class="org-ol">
+<li>Above average performance</li>
+<li>Clustered computing: multiple computers serve single resource</li>
+<li>imporves performace and increase redundancy</li>
+<li>Effecient, economical and scalable</li>
+<li>Easy to parallelise</li>
+<li>Linux based: scalable, resource effecient</li>
+<li>multi-process,multi-core,multi-thread,multi-node</li>
+<li>Limitation: speedup = SerialTime/ParallelTime</li>
+<li>Parallelism required synchronization for correctness.</li>
+<li>Reducing latency, increasing throughput, and reducing CPU power consumption</li>
+<li>Amdahl's law -&gt; Speedup is limited by the serial portion of work</li>
+<li>Gustafson and Barsis method -&gt; Parallelism enable computations on very large data sets in fixed amount of time.</li>
+</ol>
+</div>
+</div>
+<div id="outline-container-org53a1aac" class="outline-3">
+<h3 id="org53a1aac"><span class="section-number-3">4.2</span> SPARTAN</h3>
+<div class="outline-text-3" id="text-4-2">
+<ol class="org-ol">
+<li>Own authentication tied to Unimelb: Security assertion markup language (SAML)</li>
+<li>User must belong to a project</li>
+<li>Does not allow : Telnet, ftp,rsh: because send p/w in plain text</li>
+<li>Dynamic modification of user paths</li>
+<li>multiple version/modules can be installed</li>
+<li>Batch system and workload monitor: SLURM workload manager.</li>
+<li>multi-core,multithread,multinode</li>
+<li>Interactive job: to debug/test. Puts user on compute node</li>
+</ol>
+</div>
+</div>
+<div id="outline-container-orgbe8d28e" class="outline-3">
+<h3 id="orgbe8d28e"><span class="section-number-3">4.3</span> Flynn Taxonomy</h3>
+<div class="outline-text-3" id="text-4-3">
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-left">Data Steream \Instr stream -&gt;</th>
+<th scope="col" class="org-left">One</th>
+<th scope="col" class="org-left">Many</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-left">One</td>
+<td class="org-left">SISU- traditional von neumann single CPU</td>
+<td class="org-left">MISD - pipelined comp</td>
+</tr>
+
+<tr>
+<td class="org-left">Many</td>
+<td class="org-left">SIMD - Vector fine grained - Image processing</td>
+<td class="org-left">MIMD - multicomp - multiproce</td>
+</tr>
+</tbody>
+</table>
+</div>
+
+
+<div id="outline-container-org19bc018" class="outline-4">
+<h4 id="org19bc018"><span class="section-number-4">4.3.1</span> Shared memory parallel programming</h4>
+<div class="outline-text-4" id="text-4-3-1">
+<p>
+Multithreading - OpenMP
+Master thread forks 
+Easier but limited to single system unit
+Non-distributive
+</p>
+</div>
+</div>
+<div id="outline-container-orgaecc251" class="outline-4">
+<h4 id="orgaecc251"><span class="section-number-4">4.3.2</span> Distributed memory parallel programming</h4>
+<div class="outline-text-4" id="text-4-3-2">
+<p>
+Message passing paradigm - OpenMPI
+Common communication network
+many processors cooperate to solve a common problem
+programmer is responsible to identify opportunities of parallelism
+</p>
+</div>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org1fec987" class="outline-2">
+<h2 id="org1fec987"><span class="section-number-2">5</span> Lecture 5: NecTAR:</h2>
+<div class="outline-text-2" id="text-5">
+</div>
+<div id="outline-container-orgbc2f697" class="outline-3">
+<h3 id="orgbc2f697"><span class="section-number-3">5.1</span> Cloud computing:</h3>
+<div class="outline-text-3" id="text-5-1">
+<p>
+definition: uniquitous, convenient, on-demand network access,shared pool of configurable computing resources
+Common cloud models -&gt; Software/Platform/Infrastructure as a service
+Characteristics: On-demand self service
+Broad network access
+Resouce pooling
+</p>
+
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-left">Parameter</th>
+<th scope="col" class="org-left">Public cloud</th>
+<th scope="col" class="org-left">Private</th>
+<th scope="col" class="org-left">Hybrid</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-left">Advantage</td>
+<td class="org-left">Utility computing</td>
+<td class="org-left">Control</td>
+<td class="org-left">Cloud busting: use private</td>
+</tr>
+
+<tr>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">Cost effective</td>
+<td class="org-left">Trust</td>
+<td class="org-left">but burst into public when needed</td>
+</tr>
+
+<tr>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">Democratization computing</td>
+<td class="org-left">Secure</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-left">Disadvantages</td>
+<td class="org-left">Security</td>
+<td class="org-left">Relevance to core bussiness</td>
+<td class="org-left">Moving data</td>
+</tr>
+
+<tr>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">less control</td>
+<td class="org-left">Staff management</td>
+<td class="org-left">decision to make public</td>
+</tr>
+
+<tr>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">Hardware obsolete</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+</tbody>
+</table>
+
+<p>
+Public Paas - Gmail
+Iaas - Amazon web services
+</p>
+</div>
+</div>
+
+<div id="outline-container-org4074fd0" class="outline-3">
+<h3 id="org4074fd0"><span class="section-number-3">5.2</span> Nectar</h3>
+<div class="outline-text-3" id="text-5-2">
+<ul class="org-ul">
+<li>project to establish data storage resources across Australia</li>
+<li>OpenStack</li>
+<li>See lecture 9</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org5662718" class="outline-3">
+<h3 id="org5662718"><span class="section-number-3">5.3</span> Ansible</h3>
+<div class="outline-text-3" id="text-5-3">
+<ul class="org-ul">
+<li>Configuration management tool</li>
+<li>systematically handling changes so that it maintains integrity over time</li>
+<li>Easy to learn- playbook in YAML</li>
+<li>idenpotent (repeatable)</li>
+<li>Extensible</li>
+<li>Supports push and pull</li>
+<li>Rolling ypdates</li>
+<li>Linux/mac/windows</li>
+<li>Structured as folder hierarchy</li>
+</ul>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orga1b5dd5" class="outline-2">
+<h2 id="orga1b5dd5"><span class="section-number-2">6</span> Lecture 6: Web Services, REST, Docker, Contain</h2>
+<div class="outline-text-2" id="text-6">
+</div>
+<div id="outline-container-orgdb5d1d1" class="outline-3">
+<h3 id="orgdb5d1d1"><span class="section-number-3">6.1</span> Web services: SOAP</h3>
+</div>
+<div id="outline-container-orgda24ffc" class="outline-3">
+<h3 id="orgda24ffc"><span class="section-number-3">6.2</span> Rest API</h3>
+<div class="outline-text-3" id="text-6-2">
+<ul class="org-ul">
+<li>Representational state transfer - envoke an image of how a well-behaved web application</li>
+<li>HATEOAS : Restful application navigate rather than calling;</li>
+<li>Resource representation contains links to other resources</li>
+<li></li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-orgc92c164" class="outline-3">
+<h3 id="orgc92c164"><span class="section-number-3">6.3</span> Docker: ( Virtualization vs Containerizatipn)</h3>
+<div class="outline-text-3" id="text-6-3">
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-left">Parameter</th>
+<th scope="col" class="org-left">Virtualization</th>
+<th scope="col" class="org-left">Containerization</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-left">Guest OS</td>
+<td class="org-left">Run on VM h/w; have their own OS kernel</td>
+<td class="org-left">Share same OS kernel</td>
+</tr>
+
+<tr>
+<td class="org-left">Communication</td>
+<td class="org-left">Through ethernet</td>
+<td class="org-left">IPC (pipes, sockets)</td>
+</tr>
+
+<tr>
+<td class="org-left">Security</td>
+<td class="org-left">depends on hypervisor</td>
+<td class="org-left">required close security</td>
+</tr>
+
+<tr>
+<td class="org-left">Performance</td>
+<td class="org-left">Small overhead incurs when instructions are translated from guest to host OS</td>
+<td class="org-left">Near native performance</td>
+</tr>
+
+<tr>
+<td class="org-left">Isolation</td>
+<td class="org-left">file sys and lib not shared b/w guest &amp; native</td>
+<td class="org-left">can be shared</td>
+</tr>
+
+<tr>
+<td class="org-left">Startup time</td>
+<td class="org-left">slow</td>
+<td class="org-left">fast</td>
+</tr>
+
+<tr>
+<td class="org-left">Storage</td>
+<td class="org-left">large</td>
+<td class="org-left">small</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+
+<div id="outline-container-org33d566e" class="outline-3">
+<h3 id="org33d566e"><span class="section-number-3">6.4</span> Container Orchestration tools:</h3>
+<div class="outline-text-3" id="text-6-4">
+<ul class="org-ul">
+<li>kubernetes
+-&gt; Self/google/Amazon/Azure</li>
+<li>Docker SWARM</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org5d6e5f5" class="outline-3">
+<h3 id="org5d6e5f5"><span class="section-number-3">6.5</span> Safe/Idempotent</h3>
+<div class="outline-text-3" id="text-6-5">
+<ul class="org-ul">
+<li>GET, OPTIONS, HEAD – Safe</li>
+<li>PUT, DELETE – Idempotent</li>
+<li>POST – Neither safe nor idempotent</li>
+<li>Create resource : POST to a new URI; PUT to an existing URI</li>
+<li>Update : PUT</li>
+</ul>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org163a739" class="outline-2">
+<h2 id="org163a739"><span class="section-number-2">7</span> Lecture 7:Big data</h2>
+<div class="outline-text-2" id="text-7">
+</div>
+<div id="outline-container-orge276a6c" class="outline-3">
+<h3 id="orge276a6c"><span class="section-number-3">7.1</span> Big data</h3>
+<div class="outline-text-3" id="text-7-1">
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-left" />
+
+<col  class="org-left" />
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-left">Parameters</th>
+<th scope="col" class="org-left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-left">4 Vs</td>
+<td class="org-left">Volume,Velocity,Variety,Veracity(accuracy)</td>
+</tr>
+
+<tr>
+<td class="org-left">DBMS for DS</td>
+<td class="org-left">Key-Value(Postgres),BigTable(Cassandra),Document-oriented(CouchDb,MongoDb)</td>
+</tr>
+</tbody>
+</table>
+
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-left">Parameter</th>
+<th scope="col" class="org-left">CouchDB Arch</th>
+<th scope="col" class="org-left">MongoDB Arch</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-left">Read/Write</td>
+<td class="org-left">All nodes answers read/write</td>
+<td class="org-left">Write - primary node; Read- theoretically all/every node</td>
+</tr>
+
+<tr>
+<td class="org-left">Sharding</td>
+<td class="org-left">done on every node</td>
+<td class="org-left">done at replica set level - requires more than 1 cluster</td>
+</tr>
+
+<tr>
+<td class="org-left">Architecture</td>
+<td class="org-left">When data not on node1-&gt; requiest from node2</td>
+<td class="org-left">Update only from primary to secondary</td>
+</tr>
+
+<tr>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">node add/sub easy. shards rebalanced</td>
+<td class="org-left">If primary fails -&gt; secondary from replica is elected as primary</td>
+</tr>
+
+<tr>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">data balanced across replica set</td>
+</tr>
+
+<tr>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">Arbiters ~ odd to break the tie</td>
+</tr>
+
+<tr>
+<td class="org-left">Generally</td>
+<td class="org-left">less complex</td>
+<td class="org-left">more complex</td>
+</tr>
+
+<tr>
+<td class="org-left">Sodftware</td>
+<td class="org-left">HTTP calls (REST</td>
+<td class="org-left">MongoS - embedded in application</td>
+</tr>
+
+<tr>
+<td class="org-left">unique index</td>
+<td class="org-left">supported</td>
+<td class="org-left">not - supported</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+
+<div id="outline-container-org04c3d2f" class="outline-3">
+<h3 id="org04c3d2f"><span class="section-number-3">7.2</span> CAP theoren (Brewer)</h3>
+<div class="outline-text-3" id="text-7-2">
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-left">Consistency</th>
+<th scope="col" class="org-left">Availability</th>
+<th scope="col" class="org-left">Partition  Tolerance</th>
+<th scope="col" class="org-left">Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-left">Client receives same answer</td>
+<td class="org-left">receives an answer</td>
+<td class="org-left">keeps communication active even if one node goes down</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">YES</td>
+<td class="org-left">YES</td>
+<td class="org-left">Multi-version concurrency control</td>
+</tr>
+
+<tr>
+<td class="org-left">YES</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">YES</td>
+<td class="org-left">Paxos</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+
+
+<div id="outline-container-orgfa87e31" class="outline-3">
+<h3 id="orgfa87e31"><span class="section-number-3">7.3</span> Two- phase commit</h3>
+<div class="outline-text-3" id="text-7-3">
+<p>
+Locks data within transcatiom scope
+completing transcation only when all nodes have completed transaction
+</p>
+</div>
+</div>
+
+<div id="outline-container-org0e8ad0b" class="outline-3">
+<h3 id="org0e8ad0b"><span class="section-number-3">7.4</span> Paxos</h3>
+<div class="outline-text-3" id="text-7-4">
+<p>
+either a proposer or acceptor
+proposer: proposes a value
+acceptor: accpet or refute it
+</p>
+<ul class="org-ul">
+<li>can recover from partitions and maintain consistency, but the part not in quorum will not respond</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org96ab4ca" class="outline-3">
+<h3 id="org96ab4ca"><span class="section-number-3">7.5</span> MVCC</h3>
+<div class="outline-text-3" id="text-7-5">
+<p>
+every node always accepts request
+some sort of recovery from partition -&gt; revisions
+concurrent updates possible
+Sometimes conflict if concurrent requests on two partitioned nodes
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgadacc89" class="outline-3">
+<h3 id="orgadacc89"><span class="section-number-3">7.6</span> Sharding and replication</h3>
+<div class="outline-text-3" id="text-7-6">
+<p>
+data partition horizontally
+#shards &gt; #replicas &gt; #nodes
+Hash sharding &amp; range sharding
+Replication +  Sharding = Availability
+</p>
+</div>
+</div>
+<div id="outline-container-org2eb25f8" class="outline-3">
+<h3 id="org2eb25f8"><span class="section-number-3">7.7</span> MapReduce:</h3>
+<div class="outline-text-3" id="text-7-7">
+<p>
+SIMD - single instruction and multiple data
+Map - distributes
+Reduce - summarizes
+</p>
+</div>
+</div>
+
+<div id="outline-container-org7cea15b" class="outline-3">
+<h3 id="org7cea15b"><span class="section-number-3">7.8</span> CouchDB:</h3>
+<div class="outline-text-3" id="text-7-8">
+<p>
+Document -oriented
+HTTP Rest API
+Web based admin interface
+Supports MapReduce
+Javascript as data manipulator
+Replication/sharding/
+</p>
+</div>
+</div>
+
+<div id="outline-container-org921068d" class="outline-3">
+<h3 id="org921068d"><span class="section-number-3">7.9</span> Query</h3>
+<div class="outline-text-3" id="text-7-9">
+<ul class="org-ul">
+<li>MapReduce views
+Like index-organizased tables in Oracle. updated when new data comes in
+has a map and reduce part - are composite
+Can be defined in other languages than javascript; can use libraries
+fast and aggregate data
+lazy evaluation
+skip/limit
+update<sub>after</sub> - update after result returns to client</li>
+<li>Mango Queries</li>
+</ul>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgb8bad54" class="outline-2">
+<h2 id="orgb8bad54"><span class="section-number-2">8</span> Lecture 8: Big data Analytics</h2>
+<div class="outline-text-2" id="text-8">
+<ul class="org-ul">
+<li>Couchdb cannot do computation heavy</li>
+</ul>
+</div>
+<div id="outline-container-org97fe85c" class="outline-3">
+<h3 id="org97fe85c"><span class="section-number-3">8.1</span> Analytics</h3>
+<div class="outline-text-3" id="text-8-1">
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-left">Examples</th>
+<th scope="col" class="org-left">Challenges</th>
+<th scope="col" class="org-left">tools</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-left">Full text searching</td>
+<td class="org-left">Reading/writing</td>
+<td class="org-left">Statistical - R</td>
+</tr>
+
+<tr>
+<td class="org-left">aggregation</td>
+<td class="org-left">Fault toleranat</td>
+<td class="org-left">Business - Tableau</td>
+</tr>
+
+<tr>
+<td class="org-left">clustering</td>
+<td class="org-left">MapReduce</td>
+<td class="org-left">IR - Elastic Search</td>
+</tr>
+
+<tr>
+<td class="org-left">Sentiment analysis</td>
+<td class="org-left">Cluster coordination</td>
+<td class="org-left">Hadoop</td>
+</tr>
+
+<tr>
+<td class="org-left">Recommendation system</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+
+<div id="outline-container-org9d78fbe" class="outline-3">
+<h3 id="org9d78fbe"><span class="section-number-3">8.2</span> Hadoop</h3>
+<div class="outline-text-3" id="text-8-2">
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-left" />
+
+<col  class="org-left" />
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-left">Functionality</th>
+<th scope="col" class="org-left">Tool</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-left">DBMS</td>
+<td class="org-left">Hive, Hbase</td>
+</tr>
+
+<tr>
+<td class="org-left">BI</td>
+<td class="org-left">Pig</td>
+</tr>
+
+<tr>
+<td class="org-left">Distributed configuration</td>
+<td class="org-left">Zookeeper</td>
+</tr>
+
+<tr>
+<td class="org-left">Resource management</td>
+<td class="org-left">YARN</td>
+</tr>
+
+<tr>
+<td class="org-left">ML libraries</td>
+<td class="org-left">MAhout</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+
+<div id="outline-container-orgc913ff1" class="outline-3">
+<h3 id="orgc913ff1"><span class="section-number-3">8.3</span> HDFS</h3>
+<div class="outline-text-3" id="text-8-3">
+<p>
+128 MB - 1.Memory metadata reduced; 2. Effecient network use; 3. Reduced seek time; 4. Effecient processing of entire block
+</p>
+</div>
+</div>
+<div id="outline-container-orgcf3a49f" class="outline-3">
+<h3 id="orgcf3a49f"><span class="section-number-3">8.4</span> YARN</h3>
+<div class="outline-text-3" id="text-8-4">
+<p>
+Application master - resource negotiator and start containers
+</p>
+</div>
+</div>
+<div id="outline-container-org8b8bfa6" class="outline-3">
+<h3 id="org8b8bfa6"><span class="section-number-3">8.5</span> Spark</h3>
+<div class="outline-text-3" id="text-8-5">
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-left" />
+
+<col  class="org-left" />
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-left">Feature</th>
+<th scope="col" class="org-left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-left">Why</td>
+<td class="org-left">Best for complex job. Works with YARN, Zookeeper, HDFS</td>
+</tr>
+
+<tr>
+<td class="org-left">Architecture</td>
+<td class="org-left">Hadoop &lt; {standalone cluster/YARN/MESOS} &lt; Spark Core &lt; {Mlib/GraphX/Streaming}</td>
+</tr>
+
+<tr>
+<td class="org-left">Data In-Out</td>
+<td class="org-left">CSV/JSON/SequenceFile (key/value)/Serialised java object,</td>
+</tr>
+
+<tr>
+<td class="org-left">Spark Shell</td>
+<td class="org-left">Good for simple. Poor optimization</td>
+</tr>
+
+<tr>
+<td class="org-left">Runtime Arch.</td>
+<td class="org-left">Job, tasks,executors, cluster manager, driver program, spark application, Spark context</td>
+</tr>
+
+<tr>
+<td class="org-left">Local mode</td>
+<td class="org-left">All Spark Comp = Same JVM</td>
+</tr>
+
+<tr>
+<td class="org-left">Cluster mode</td>
+<td class="org-left">Every component = In cluster/Different JVM = each compnent run autonomously</td>
+</tr>
+
+<tr>
+<td class="org-left">Client Mode</td>
+<td class="org-left">Driver connected to worker nodes till completion</td>
+</tr>
+
+<tr>
+<td class="org-left">Spark Context</td>
+<td class="org-left">set configurations</td>
+</tr>
+
+<tr>
+<td class="org-left">RDD</td>
+<td class="org-left">Resilien = Redundently stored,Distributed = data split into chunks; dataset =  collection of object</td>
+</tr>
+
+<tr>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">Immutable, transient, lazy evaluation</td>
+</tr>
+
+<tr>
+<td class="org-left">Transformations</td>
+<td class="org-left">flatmap,maptopair,reducebykey</td>
+</tr>
+
+<tr>
+<td class="org-left">Actions</td>
+<td class="org-left">saveastextfile</td>
+</tr>
+
+<tr>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org6a27d1d" class="outline-2">
+<h2 id="org6a27d1d"><span class="section-number-2">9</span> Lecture 9</h2>
+<div class="outline-text-2" id="text-9">
+</div>
+<div id="outline-container-orgff029d3" class="outline-3">
+<h3 id="orgff029d3"><span class="section-number-3">9.1</span> Principle</h3>
+<div class="outline-text-3" id="text-9-1">
+<p>
+Theorem : Popek and Goldberg:
+Priviliged rings: if sensitive instructions are part of previliged instructions
+</p>
+</div>
+</div>
+<div id="outline-container-orgc9454ce" class="outline-3">
+<h3 id="orgc9454ce"><span class="section-number-3">9.2</span> what happends in VM?</h3>
+<div class="outline-text-3" id="text-9-2">
+<ul class="org-ul">
+<li>Hypervisor:( virtual machine memory). Unnoticable,supports b/t hardware and VM application</li>
+<li>VM machine layer: representation of real machine</li>
+<li>Internally: there is user level and kernel level(sytem level)</li>
+<li>Virtual hard disk -&gt; managed by hyperviser</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgfbfc0a1" class="outline-3">
+<h3 id="orgfbfc0a1"><span class="section-number-3">9.3</span> Motivation History</h3>
+<div class="outline-text-3" id="text-9-3">
+<ol class="org-ol">
+<li>Server consolidation; 2. Personal VM on demand 3) Securit/Installation</li>
+<li>Hardware independence</li>
+<li>Gain: 1 server and all assignment running on it. Multiple people using resources.</li>
+<li>Dont need to bind anything.</li>
+<li>Migrate the things and run it whereever Openstack is avaliable.</li>
+<li>It started in 1960s</li>
+</ol>
+</div>
+</div>
+<div id="outline-container-orga094d30" class="outline-3">
+<h3 id="orga094d30"><span class="section-number-3">9.4</span> Requirements of virtualization?</h3>
+<div class="outline-text-3" id="text-9-4">
+<ul class="org-ul">
+<li>Innocous instructions: need no previlige (Read data)</li>
+<li>Senstive instruction should be contained in previliged instruction</li>
+<li>Think in terms of Rings.</li>
+<li>Kernel &lt; Device Driver &lt; Application (most to least privilige)</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org1b535d3" class="outline-3">
+<h3 id="org1b535d3"><span class="section-number-3">9.5</span> X86 Architecture Problems:</h3>
+<div class="outline-text-3" id="text-9-5">
+<ul class="org-ul">
+<li>Original chip</li>
+<li>The chipset were not able deal with the Rings system instruction sets</li>
+<li>Need hardware support for this. x86 does not allow this. Couldnt capture these system level instructions</li>
+<li>Extended and support</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org427529e" class="outline-3">
+<h3 id="org427529e"><span class="section-number-3">9.6</span> Virtualization approaches</h3>
+<div class="outline-text-3" id="text-9-6">
+<ul class="org-ul">
+<li>VMM needs support: De-privelige(trap the senstive stuff), Memory management, (physical vs virtual CPU)</li>
+<li>Eg of hypervisor: KVM,Xen,</li>
+<li>Disadvantage: Slows down the CPU</li>
+<li>Xen - Interfaces available which can help increase performance of VM(Para-virtualization)</li>
+</ul>
+
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-left">Virtualization</th>
+<th scope="col" class="org-left">Adv</th>
+<th scope="col" class="org-left">DistV</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-left">Full</td>
+<td class="org-left">1. Guest unaware of running VM;</td>
+<td class="org-left">Less effecient,</td>
+</tr>
+
+<tr>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">2.Guest OS needs no modification,</td>
+<td class="org-left">perf. degradation</td>
+</tr>
+
+<tr>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">3) No hardare/OS assistance,</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-left">Para</td>
+<td class="org-left">Better perf. because certain calls are allowed to happen</td>
+<td class="org-left">1. Special guest OS that can only run.</td>
+</tr>
+
+<tr>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">2. less portable &amp; compatible (KVM).</td>
+</tr>
+</tbody>
+</table>
+
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-left">Aspect</th>
+<th scope="col" class="org-left">Adv</th>
+<th scope="col" class="org-left">DistA</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-left">Hardware Assisted(KVM)</td>
+<td class="org-left">fast, best</td>
+<td class="org-left">need hardware support</td>
+</tr>
+
+<tr>
+<td class="org-left">Binary translation</td>
+<td class="org-left">Guest OS needs no modification</td>
+<td class="org-left">Overhead, complicated.</td>
+</tr>
+
+<tr>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">Replace instructions on the fly - computational expensive</td>
+</tr>
+</tbody>
+</table>
+
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-left" />
+
+<col  class="org-left" />
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-left">Type</th>
+<th scope="col" class="org-left">description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-left">Bare Metal Hypervisor</td>
+<td class="org-left">Vm runs directly on hardware (VMWare ESX server)</td>
+</tr>
+
+<tr>
+<td class="org-left">Hosted Virtualization</td>
+<td class="org-left">VM runs on top of another OS (Workstation)</td>
+</tr>
+</tbody>
+</table>
+
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-left">&#xa0;</th>
+<th scope="col" class="org-left">Adv:</th>
+<th scope="col" class="org-left">DistA</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-left">OS virtualization</td>
+<td class="org-left">Lightweight, Many VM on same hardware;</td>
+<td class="org-left">apps only for that OS;</td>
+</tr>
+
+<tr>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">OS dependencies into containers</td>
+<td class="org-left">Can't run different OS; only native systems</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+
+<div id="outline-container-org57798b2" class="outline-3">
+<h3 id="org57798b2"><span class="section-number-3">9.7</span> Memory management</h3>
+<div class="outline-text-3" id="text-9-7">
+<ul class="org-ul">
+<li>VM monitor has page tables -&gt; Maps to virtual memory view(shadow page table) -&gt;</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org107287f" class="outline-3">
+<h3 id="org107287f"><span class="section-number-3">9.8</span> Live migration</h3>
+<div class="outline-text-3" id="text-9-8">
+<p>
+Hot migration -&gt; live system migration and moving
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgb04efdb" class="outline-3">
+<h3 id="orgb04efdb"><span class="section-number-3">9.9</span> OpenStack-AWS</h3>
+<div class="outline-text-3" id="text-9-9">
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-left">Parameter</th>
+<th scope="col" class="org-left">Nectar</th>
+<th scope="col" class="org-left">Amazon</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-left">Building</td>
+<td class="org-left">Building is same</td>
+<td class="org-left">same, but locked in to Azure</td>
+</tr>
+
+<tr>
+<td class="org-left">Cloud world</td>
+<td class="org-left">RackspacE + NASA. OpenStack; Its an eco-system, install which one you want</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-left">Components</td>
+<td class="org-left">Compute, image, block storage,object storage, management, network,database</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">dashboard</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-left">Keystone</td>
+<td class="org-left">Authetication</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-left">Good</td>
+<td class="org-left">Felxibility to install different virtualization library</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-left">Object storage</td>
+<td class="org-left">Swift</td>
+<td class="org-left">s3 buckets</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+
+<div id="outline-container-orga6e47bc" class="outline-3">
+<h3 id="orga6e47bc"><span class="section-number-3">9.10</span> NeCTAR Research cloud</h3>
+<div class="outline-text-3" id="text-9-10">
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-left">Key Services</th>
+<th scope="col" class="org-left">Type</th>
+<th scope="col" class="org-left">Feature</th>
+<th scope="col" class="org-left">&#xa0;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-left">KeyStone</td>
+<td class="org-left">Identity</td>
+<td class="org-left">Provides Authentication &amp; authorization</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-left">Nova</td>
+<td class="org-left">Compute</td>
+<td class="org-left">Manages lifecycle-spawning, scheduling &amp; decommisioning of VM</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">Virtualization agnostic.</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-left">Swift</td>
+<td class="org-left">Object storage</td>
+<td class="org-left">Stores and retrieves arbitrary unstructured data objects via REST. Fault tolerant via replication</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">Run w/without Nova. Client-admin support</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-left">Cinder</td>
+<td class="org-left">Block storage</td>
+<td class="org-left">persistance block storage, creation &amp; management of block storage devices</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-left">Glance</td>
+<td class="org-left">Image service</td>
+<td class="org-left">Accepts requests for disk or server images and their associated metadata (from Swift)</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">and retrieves / installs (through Nova)</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-left">Neutron</td>
+<td class="org-left">Networking</td>
+<td class="org-left">Networking of Openstack services; user-defined networks API;</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-left">Horizon</td>
+<td class="org-left">Dashboard</td>
+<td class="org-left">Based on Python/Django Web application;interaction with OpenStack services, such as launching an</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">instance, assigning IP addresses and configuring access controls.</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-left">Trove</td>
+<td class="org-left">Dashboard service</td>
+<td class="org-left">Scalable &amp; reliable cloud Database</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-left">Sahara</td>
+<td class="org-left">Data Processing service</td>
+<td class="org-left">Scale hadoop</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-left">Heat</td>
+<td class="org-left">Orchestration service</td>
+<td class="org-left">template driven lifecycle management of application</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+
+
+<div id="outline-container-org46a6cf7" class="outline-3">
+<h3 id="org46a6cf7"><span class="section-number-3">9.11</span> Faas : Serverless</h3>
+<div class="outline-text-3" id="text-9-11">
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-left" />
+
+<col  class="org-left" />
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-left">Paramenter</th>
+<th scope="col" class="org-left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-left">Definition</td>
+<td class="org-left">Function as service.software application without bothering about infrastructure (Server unseen)</td>
+</tr>
+
+<tr>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">Function are added/removed/executed/auto-scaled.</td>
+</tr>
+
+<tr>
+<td class="org-left">Characgeristic</td>
+<td class="org-left">Free from side-effects. simple deployment, reduce computing cost.reduce application complexity</td>
+</tr>
+
+<tr>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">Triggered by events -&gt; can callother events</td>
+</tr>
+
+<tr>
+<td class="org-left">Framework</td>
+<td class="org-left">Amazon lambda,funct use services of resp. platform</td>
+</tr>
+
+<tr>
+<td class="org-left">Functions</td>
+<td class="org-left">Side-effect free run in parallel</td>
+</tr>
+
+<tr>
+<td class="org-left">Stateful</td>
+<td class="org-left">functions with side-effect</td>
+</tr>
+
+<tr>
+<td class="org-left">Stateless</td>
+<td class="org-left">without side-effect</td>
+</tr>
+
+<tr>
+<td class="org-left">Sync/Async</td>
+<td class="org-left">FaaS system are synchronous but can be made asyn</td>
+</tr>
+
+<tr>
+<td class="org-left">OpenFaas</td>
+<td class="org-left">Opens in Docker container. Are open source</td>
+</tr>
+
+<tr>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">Each function is loosely coupled</td>
+</tr>
+</tbody>
+</table>
+
+
+
+<ul class="org-ul">
+<li></li>
+
+<li></li>
+
+<li>Functions should be free of side-effects</li>
+
+<li>Simpler deployment</li>
+</ul>
+<p>
+-&gt; Amazon AWS Lambda: Scale up/scale down and are independed of physical infrastructure 
+-&gt; tied to docker
+</p>
+
+<p>
+-&gt; 
+</p>
+</div>
+</div>
+</div>
+<div id="outline-container-orgabe45b7" class="outline-2">
+<h2 id="orgabe45b7"><span class="section-number-2">10</span> Lecture 12</h2>
+<div class="outline-text-2" id="text-10">
+</div>
+<div id="outline-container-org4a0afce" class="outline-3">
+<h3 id="org4a0afce"><span class="section-number-3">10.1</span> Technical Challenges:</h3>
+<div class="outline-text-3" id="text-10-1">
+<ol class="org-ol">
+<li>Authentication: Identify people -1. user/pw; 2. Public/Private keys</li>
+<li>Authorization:</li>
+<li>Audit/Track - who when ?</li>
+<li>Privacy</li>
+<li></li>
+</ol>
+</div>
+</div>
+
+<div id="outline-container-orgf0fd4e1" class="outline-3">
+<h3 id="orgf0fd4e1"><span class="section-number-3">10.2</span> Certification:</h3>
+<div class="outline-text-3" id="text-10-2">
+<ul class="org-ul">
+<li>many works with chrome/firefox:</li>
+<li>Policy and procedures</li>
+<li>Issuing certificates: Sometimes physically checked</li>
+<li>Revoking certificates :</li>
+<li>Simple CA: 1. Apply for Cert; 2. check details. 3. CA verifies; 4. grants</li>
+<li>Unimelb: ID provided; Amazon: VisaCard provided -&gt; to provide ID</li>
+<li></li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org57668c7" class="outline-3">
+<h3 id="org57668c7"><span class="section-number-3">10.3</span> Authorization</h3>
+<div class="outline-text-3" id="text-10-3">
+<p>
+Based on controlling access to resources based on policy
+Different approaches:
+</p>
+<ul class="org-ul">
+<li>Role based access control ( Passport) -&gt; What roles do i have in system &amp; people in this role can read/write this part. User assumes one or more role</li>
+<li>Group based access control -&gt;</li>
+<li><p>
+Identity based access control
+</p>
+
+<p>
+Ways to do it ?
+</p></li>
+<li>whats roles? what previliges? what policies? rules</li>
+<li>XACML - &gt; XML based roles deifinition policies</li>
+<li>RBAC - roles based access control
+-&gt; roles/actions/resources previliges</li>
+<li></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org25ebaf6" class="outline-3">
+<h3 id="org25ebaf6"><span class="section-number-3">10.4</span> Shibboleth Augmented Authorisation</h3>
+<div class="outline-text-3" id="text-10-4">
+<ul class="org-ul">
+<li>when asked to access</li>
+<li>grants based on roles of already registered users</li>
+<li>set of previliges</li>
+<li>The main elements of a web-based SSO system are:
+<ol class="org-ol">
+<li>Web Browser – represents the user within the SSO process</li>
+<li>Resource – contains restricted access content that the user wants</li>
+<li>Identity Provider (IdP) – authenticates the user</li>
+<li>Service Provider (SP) – performs the SSO process for the resource</li>
+</ol></li>
+</ul>
+</div>
+</div>
+
+
+
+
+<div id="outline-container-org4c5f66f" class="outline-3">
+<h3 id="org4c5f66f"><span class="section-number-3">10.5</span> Other cloud security challenges:</h3>
+<div class="outline-text-3" id="text-10-5">
+<ul class="org-ul">
+<li>Single sign-on :  the grid model ( difficult to update because eveyrbody is using it now)</li>
+<li>Auditing: logging, who did what?; deletino on cloud? - difficult;</li>
+<li>Liability -</li>
+<li>Licensing: software licence model isnt well made yet; why MATLAB isnt on cloud - becasue then everyone outside of unimelb can access it as well</li>
+<li>workflows:</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div id="postamble" class="status">
+<p class="author">Author: Saransh Srivastava</p>
+<p class="date">Created: 2019-06-11 Tue 21:07</p>
+<p class="validation"><a href="http://validator.w3.org/check?uri=referer">Validate</a></p>
+</div>
+</body>
+</html>
